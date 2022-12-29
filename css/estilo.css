@@ -14,88 +14,120 @@
     font-family: 'Coming Soon', cursive;
 }
 
-/*! HEADER */
-.backgroundHeader{
-    height: 100%;
+/*! --------------------------------------I-N-D-E-X.html--------------- */
+
+
+
+
+
+.container-bgHeaderIndex{
+    width: 100%;
+    height: auto;
     background: #726b64;  
     background: -webkit-linear-gradient(to right, #f2c84cc7, #726b64), url(../img/bg/bg1.jpg); 
-    background: linear-gradient(to right, #726b64a2, #726b649d), url(../img/bg/bg1.jpg);     background-size: cover;
+    background: linear-gradient(to right, #726b6485, #726b6480), url(../img/bg/bg1.jpg);     background-size: cover;
     background-attachment: fixed;    
     position: relative;
 }
-
-header{
+.block-title1{
     width: 100%;
-    height: 100vh;   
-}
-header .containerNav{
+    height: 30em;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-}
-.textPresentacion{
-    height: 80%;
-    padding-top: 70px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
-
-.textPresentacion h1{
+.block-title1 div{
     text-align: center;
+}
+.title1{
+    font-family: 'Prosto One', cursive;
+    font-size:75px;
     color: #ffffff;
-    font-size: 70px;
-    font-family: 'Unbounded', cursive;
+}
+.subTitle1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+}
+.block-title1 {
+	-webkit-animation: block-title 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+	        animation: block-title 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+}
+@-webkit-keyframes block-title {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+@keyframes block-title {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
 }
 
-.textPresentacion h3{
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+
+/*?--------------- MAIN -----------------------*/
+
+
+/*?--------------- SECTION 1----------------------*/
+.slider1{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 20px;    
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 20px auto 0;
+    grid-column: 2/6;
 }
-.textPresentacion h4{
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-}
-header img{
-    width: 110px;
-    height: 50px;
-}
-header nav{
+.slider1 ul{
     display: flex;
-    margin: 10px;
+    padding: 0;
+    width: 600%;
+    animation: cambio 20s infinite alternate ease-in-out;
 }
-header nav ul{
+.slider1 li{
+    width: 100%;
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
 }
-header nav ul li{
-    margin: 15px;
-}
-header nav ul li a{ 
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-.btnReservar{
-    border: 2px solid white;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-}
-.btnReservar a{
-    text-decoration: none;
-    color: white;
-}
-.btnReservar:hover{
-    border: 2px solid #ffffff;
-    box-shadow: #ffffff 0px 0px 12px 1px inset, #ffffff 0px 0px 12px 1px;
-    border-radius: 10px;
+.slider1 img{
+    width: 100%;
+    height: 100%;
 }
 
-/*! MAIN */
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+
 /*? SECTION 1*/
 .container1{
     display: flex;
@@ -199,102 +231,45 @@ header nav ul li a{
     margin-top: 30px;
 
 }
-.btn_irMenu div{
-    border: 2px solid white;
-    padding: 5px;
-}
-.btn_irMenu a{
-    padding: 30px;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.btn_irMenu div:hover{
-    border: 2px solid #ffffff;
-    box-shadow: #ffffff 0px 0px 12px 1px inset, #ffffff 0px 0px 12px 1px;
-    border-radius: 10px;
-}
-
-/*! FOOTER */
-.container_sector{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.sector1 {
-    width: 25%;
-    height: 50vh;
-    padding: 10px;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-}
-.sector1 img{ 
-    width: 150px;
-    height: 70px;
-    margin: 30px;
-}
-.sector1 p{
-    margin-left: 10px;
-}
-.redes_sociales img{
-    width: 30px;
-    height: 30px;
-}
-
-.sector2 {
-    width: 25%;
-    height: 50vh;
-    padding: 10px;
-}
-.sector2 div{ 
-    margin-top: 30px;
-    margin-left: 20px;
-}
-.sector2 div p{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.sector2 a{
+.section3-index-title{
     text-align: center;
-    text-decoration: none;
+    font-size: 50px;
+}
+.section3-index div p{
+    font-size: 20px;
+}
+
+.section3-index-container { 
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
+}
+.section3-index-container-caja{
+    width: auto;
+    text-align: center;
+}
+.section3-index-container-caja img{
+    width: 100%;
+    height: 400px;
+    
+}
+.section3-index-container-caja-info h3{
     color: #1a1a1a;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 5px 0;
+    font-family: 'Prosto One', cursive;
+}
+.section3-index-container-caja-info-redes img{
+    width: 20px;
+    height: 20px;
 }
 
-.sector2 a img{
-    width: 25px;
-    height: 25px;
-}
 
-.sector3 {
-    width: 25%;
-    height: 50vh;
-    padding: 10px;    
-}
-.sector3 div{
-    margin-top: 30px;
-    margin-left: 20px;
 
-}
-.sector3 div ul{
-    margin-top: 10px;
-    list-style: none;
-}
-.sector3 div ul li a{
-    color: #1a1a1a;
-}
-.sector4 {
-    width: 25%;
-    height: 50vh;
-    padding: 10px;   
-}
-.sector4 div { 
-    margin-top: 30px;
-}
 
-/*! MENU.HTML*/
+/*! ----------------------------------------------MENU.HTML*/
 .backgroundHeader2{
     height: 100%;
     background: #726b64;  
@@ -706,6 +681,20 @@ header nav ul li a{
 }
 
 /*? MAIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section-history{
     background: #726b64;
     display: grid;
@@ -935,7 +924,6 @@ header nav ul li a{
     color: rgb(255, 234, 46);
 }
 .total-resenia{
-    width: 800px;
     padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -1143,27 +1131,146 @@ header nav ul li a{
     background-color: white;
 }
 
-@media screen and (max-width:1306px) {
-    body{
-        background: tomato;
-    }
-    .elementos-resenia{
-        width: 600px;
-    }
-    .nav-links{
-        font-size: 10px;
-        padding: 0 10px;
-    }
-    .nav-links li {
-        padding: 0 10px;
-    }
+html{
+    height: 100%;
+
 }
 @media screen and (max-width:480px) {
-    body{
-        background: pink;
+    .section2{
+        width: 100%;
+    }
+    .header .logo img{
+        width: 350px;
+        height: 200px;
     }
     .header{
         width: 100%;
+        flex-direction: column;
     }
-}
+    .navbar{
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-links{
+        text-align: center;
+        flex-direction: column;
+    }
+    .seccion-reservas h2{
+        font-size: 50px;
+    }
+    .section1{
+        flex-direction: column;
+        
+    }
+    .title{
+        font-size: 50px;
+    }
+    .elementos-resenia{
+        width: 450px;
+        padding: 0 10px;
+    }
+    .title1{
+        font-size: 30px;
+    }
+    .container1 div img{
+        width: 100%;
+        height: 200px;
+    }
+    .container1_targetLugar{
+        flex-direction: column;
+    }
+    .container1_targetAmbiente{
+        flex-direction: column;
+    }
+    .container1_targetExperiencia{
+        flex-direction: column;
+    }
+    .container1_targetLugar p{
+        font-size: 10px;
+    }
+    .container1_targetAmbiente p{
+        font-size: 10px;
+    }
+    .container1_targetAmbiente{
+        flex-direction: column;
+    }
+    .container1_targetExperiencia{
+        flex-direction: column;
+    }
+    .container1_targetExperiencia p{
+        font-size: 10px;
+    }
+    .container1 h2{
+        margin-top: 40px;
+        font-size: 23px;
+        text-align: center;
+    }
+    .container2_titulo h1{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        display: inline-block;
+        position: relative;
+        
+    }
+    .container2_titulo h1::after, .container2_titulo h1::before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        background-color: currentColor;
+        top: 0.5em;
+    }
+    
 
+}
+@media screen and (max-width:768px){
+    body{
+        background: greenyellow;
+    }
+    .container-bgHeaderTestimonio{
+        width: 100%;
+        background-position: center;
+    }
+    .section2{
+        width: 100%;
+    }
+    .header .logo img{
+        width: 350px;
+        height: 200px;
+    }
+    .header{
+        width: 100%;
+        flex-direction: column;
+    }
+    .container-flex{
+        width: 100%;
+        justify-content: center;
+    }
+    .navbar{
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-links{
+        text-align: center;
+        flex-direction: column;
+    }
+    .seccion-reservas h2{
+        font-size: 50px;
+    }
+
+    .section1{
+        flex-direction: column;
+        
+    }
+    .title{
+        font-size: 50px;
+    }
+    .elementos-resenia{
+        width: 450px;
+        padding: 0 10px;
+    }
+
+
+
+}
