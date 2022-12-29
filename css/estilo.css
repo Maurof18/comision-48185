@@ -1225,9 +1225,6 @@ html{
 
 }
 @media screen and (max-width:768px){
-    body{
-        background: greenyellow;
-    }
     .container-bgHeaderTestimonio{
         width: 100%;
         background-position: center;
